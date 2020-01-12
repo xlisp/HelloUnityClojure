@@ -14,10 +14,14 @@
                v3)))
 
 (defn def-move!
-  [go _]
+  [go]
   (let [offset (Vector3. 0.01 0 0)]
     (move! go offset)))
 
-;;(move! c1 (Vector3. 2 0 0)) ;; 在Scene页面上面移动成功了
+;;(move! c (Vector3. 2 0 0)) ;; 在Scene页面上面移动成功了
 
 ;;(hook+ c :update :move #'def-move!) ;;并没有慢慢移动
+
+;; 保存文件自动创建更新: 内容:reload-on-change true
+;; (log "Test222")
+
