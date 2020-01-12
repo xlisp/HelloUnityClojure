@@ -13,15 +13,17 @@
         (l/v3+ (.. go transform position)
                v3)))
 
-(defn def-move!
-  [go]
-  (let [offset (Vector3. 0.01 0 0)]
+(defn the-move!
+  [go _]
+  (let [offset (Vector3. 1 0 0)]
+    (log "move ...")
     (move! go offset)))
 
-;;(move! c (Vector3. 2 0 0)) ;; 在Scene页面上面移动成功了
+(move! c (Vector3. 10 0 0)) ;; 在Scene页面上面移动成功了
 
-;;(hook+ c :update :move #'def-move!) ;;并没有慢慢移动
+(hook+ c :update :move #'the-move!) ;;并没有慢慢移动
 
 ;; 保存文件自动创建更新: 内容:reload-on-change true
-;; (log "Test222")
+
+(log "Test333")
 
